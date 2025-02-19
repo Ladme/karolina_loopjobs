@@ -6,6 +6,7 @@ Scripts for running Gromacs simulations on the Karolina supercomputer (IT4I).
 - `loop_md_cpu`: Runs a single CPU-only job on one node.
 - `loop_md_gpu`: Runs a single GPU-accelerated job on one node.
 - `loop_re_cpu`: Runs HREX simulation over multiple replicas using CPUs only (can use one or more nodes).
+- `loop_re_gpu`: Runs HREX simulation over multiple replicas using CPUs+GPUs (can use one or more nodes).
 
 ## Submission Script
 - `loop_sub`: Submits jobs in a loop to the batch system.
