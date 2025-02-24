@@ -39,7 +39,7 @@ MAXWARN="0"
 HREX_FREQ=50000
 
 # gromacs version
-GMX_VERSION="GROMACS/2021.4-foss-2020b-PLUMED-2.7.3"
+GMX_VERSION="GROMACS/2021.4-fosscuda-2020b-PLUMED-2.7.3"
 
 # @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
