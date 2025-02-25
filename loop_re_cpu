@@ -79,7 +79,7 @@ else
 fi
 
 # run the gromacs simulation
-srun -n $(( $SLURM_NTASKS * $SLURM_NNODES )) gmx_mpi mdrun -ntomp $SLURM_CPUS_PER_TASK -v -deffnm ${STORAGE_DIR}/md${CYCLE_FMT} ${CPI_COMMAND} -cpo ${STORAGE_DIR}/md${NEXT_FMT} -multidir $(ls -d ${SIM_DIRS}* | sort -h) -noappend -plumed plumed.dat -replex ${HREX_FREQ} -hrex -pin on || exit 1 
+srun -n $SLURM_NTASKS gmx_mpi mdrun -ntomp $SLURM_CPUS_PER_TASK -v -deffnm ${STORAGE_DIR}/md${CYCLE_FMT} ${CPI_COMMAND} -cpo ${STORAGE_DIR}/md${NEXT_FMT} -multidir $(ls -d ${SIM_DIRS}* | sort -h) -noappend -plumed plumed.dat -replex ${HREX_FREQ} -hrex -pin on || exit 1 
 
 for SIM in ${SIM_DIRS}*; do
     cd $SIM
