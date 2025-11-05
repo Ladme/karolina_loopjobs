@@ -11,8 +11,8 @@
 #SBATCH --account=[[ACCOUNT_ID]]
 #SBATCH --time=24:00:00
 #SBATCH --nodes=2
-#SBATCH --ntasks=4
-#SBATCH --cpus-per-task=32
+#SBATCH --ntasks-per-node=4    # number of MPI tasks per node
+#SBATCH --cpus-per-task=16     # CPUs per one MPI task
 #SBATCH --partition=qcpu
 #SBATCH -e job-%j.err -o job-%j.out
 
